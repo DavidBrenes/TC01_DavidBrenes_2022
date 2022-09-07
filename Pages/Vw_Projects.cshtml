@@ -1,0 +1,45 @@
+﻿@page
+@model TC01_DavidBrenes_2022.Pages.Vw_Projects
+@{
+}
+
+
+<br />
+<h2>Lista de Proyectos</h2>
+
+@*<a class'btn btn-primary btn-sm' href="/Vw_Projects/Create">New Client</a>*@
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Fecha Inicio</th>
+			<th>Fecha Final</th>
+			<th>Esfuerzo Esperado (horas)</th>
+			<th>Esfuerzo Real (horas)</th>
+			<th>Descripcion</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var Project in Model.list_ProjectInfo)
+		{
+			<tr>
+				<td>@Project.id</td>
+				<td>@Project.nombre</td>
+				<td>@Project.fecha_inicio</td>
+				<td>@Project.fecha_final</td>
+				<td>@Project.esfuerzo_esp</td>
+				<td>@Project.esfuerzo_real</td>
+				<td>@Project.descripcion</td>
+				@*				<td>
+			<a class="btn btn-primary btn-sm" href="/Vw_Projects/Edit?codigo=@Project.codigo">Editar</a>
+			<a class="btn btn-danger btn-sm" href="/Vw_Projects/Delete?codigo=@Project.codigo">Eliminar</a>
+			</td>*@
+			</tr>
+		}
+
+
+	</tbody>
+</table>

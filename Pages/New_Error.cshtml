@@ -1,0 +1,90 @@
+﻿@page
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model TC01_DavidBrenes_2022.Pages.New_ErrorModel
+@{
+}
+
+<br>
+<h2>Nuevo Error</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+
+	<div class=' alert alert-warning alert-dismissible fade show' role='alert'>
+
+		<strong> @Model.errorMessage </strong>
+		<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+	</div>
+}
+
+<form method="post" >
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Detalle</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="detalle" value="@Model.ErrorInfo_New.detalle">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Fecha y hora de ocurrencia</label>
+		<div class="col-sm-6">
+			<input type="datetime-local" class="form-control" name="fecha_hora" value="@Model.ErrorInfo_New.fecha_hora">
+		</div>
+	</div>	
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Impacto</label>
+		<div class="col-sm-6">
+			<select class="form-control" name="id_Impacto" id="lang" value="@Model.ErrorInfo_New.id_Impacto">
+				@foreach (var impacto in Model.list_ImpactInfo)
+		{
+					<option value="@impacto.id">@impacto.impacto</option>
+		}
+			</select>
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Aplicación y Servidor donde ocurrió</label>
+		<div class="col-sm-6">
+			<select class="form-control" name="numSerie_Servidor" id="lang" value="@Model.ErrorInfo_New.numSerie_Servidor">
+				@foreach (var app_server in Model.list_App_ServerInfo)
+				{
+					<option value="@app_server.valor">@app_server.nombre</option>
+				}
+			</select>
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Proyecto de corrección asociado</label>
+		<div class="col-sm-6">
+			<select class="form-control" name="id_Proyecto_Correccion" id="lang" value="@Model.ErrorInfo_New.id_Proyecto_Correccion">
+				@foreach (var proyecto in Model.list_ProyectoInfo)
+				{
+					<option value="@proyecto.id">@proyecto.name</option>
+				}
+			</select>
+		</div>
+	</div>
+
+	@if (Model.successMessage.Length > 0)
+	{
+		<div class="row mb-3">
+			<div class="col-sm-9">
+				<div class='alert alert-success alert-dismissible fade show' role='alert'>
+
+					<strong> @Model.successMessage </strong>
+					<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+				</div>
+			</div>
+		</div>
+	}
+
+	<div class="row mb-3">
+		<div class="offset-sm-3 col-sm-3 d-grid">
+			<input class="btn btn-outline-primary" type="submit" value="Submit" asp-page-handler="Submit" />
+		</div>
+		<div class="col-sm-3 d-grid">
+			<a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+		</div>
+	</div>
+</form>
+
+

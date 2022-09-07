@@ -1,0 +1,51 @@
+﻿@page
+@model TC01_DavidBrenes_2022.Pages.Vw_Errors
+@{
+}
+
+
+<br />
+<h2>Lista de Errores</h2>
+
+@*<a class'btn btn-primary btn-sm' href="/Vw_errors/Create">New Client</a>*@
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Detalle</th>
+			<th>Fecha</th>
+			<th>Hora</th>
+			<th>Impacto</th>
+			<th>Numero de Serie de Servidor</th>
+			<th>Codigo de App</th>
+			<th>Nombre de App</th>
+			<th>ID de Proyecto de Correccion</th>
+			<th>Nombre de Proyecto de Correccion</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var error in Model.list_ErrorInfo)
+		{
+			<tr>
+				<td>@error.id</td>
+				<td>@error.detalle</td>
+				<td>@error.fecha</td>
+				<td>@error.hora</td>
+				<td>@error.Impacto</td>
+				<td>@error.numSerie_Servidor</td>
+				<td>@error.cod_App</td>
+				<td>@error.App_Nombre</td>
+				<td>@error.id_Proyecto_Correccion</td>
+				<td>@error.Proyecto_Nombre</td>
+				@*				<td>
+			<a class="btn btn-primary btn-sm" href="/Vw_errors/Edit?codigo=@error.codigo">Editar</a>
+			<a class="btn btn-danger btn-sm" href="/Vw_errors/Delete?codigo=@error.codigo">Eliminar</a>
+			</td>*@
+			</tr>
+		}
+
+
+	</tbody>
+</table>

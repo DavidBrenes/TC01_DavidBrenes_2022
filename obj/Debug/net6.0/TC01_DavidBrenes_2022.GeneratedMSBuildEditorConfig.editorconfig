@@ -1,0 +1,72 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TC01_DavidBrenes_2022
+build_property.RootNamespace = TC01_DavidBrenes_2022
+build_property.ProjectDir = C:\GitHub\Base de Datos _ 2SE22\TareaBase_DavidBrenes\TC01\TC01_DavidBrenes_2022\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\GitHub\Base de Datos _ 2SE22\TareaBase_DavidBrenes\TC01\TC01_DavidBrenes_2022
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/New_App.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3X0FwcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/New_Department.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3X0RlcGFydG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/New_Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3X0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/New_Server.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3X1NlcnZlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/Vw_Apps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVndfQXBwcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/Vw_Errors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVndfRXJyb3JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/Vw_Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVndfUHJvamVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/Base de Datos _ 2SE22/TareaBase_DavidBrenes/TC01/TC01_DavidBrenes_2022/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-kzzdlkortk

@@ -1,0 +1,112 @@
+﻿@page
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model TC01_DavidBrenes_2022.Pages.New_AppModel
+@{
+}
+@*<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+*@
+<br>
+<h2>Nueva Aplicación de Software</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+
+	<div class=' alert alert-warning alert-dismissible fade show' role='alert'>
+
+		<strong> @Model.errorMessage </strong>
+		<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+	</div>
+}
+
+<form method="post" >
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Codigo</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="codigo" value="@Model.AppInfo_New.codigo">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Nombre</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="nombre" value="@Model.AppInfo_New.nombre">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Numero de Patente</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="num_Patente" value="@Model.AppInfo_New.num_Patente">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Descripcion</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="descripcion" value="@Model.AppInfo_New.descripcion">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Fecha lanzamiento a Producion</label>
+		<div class="col-sm-6">
+			<input type="date" class="form-control" name="fecha_Prod" value="@Model.AppInfo_New.fecha_Prod">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Fecha expiracion de licencia</label>
+		<div class="col-sm-6">
+			<input type="date" class="form-control" name="fecha_exp_lic" value="@Model.AppInfo_New.fecha_exp_lic">
+		</div>
+	</div>
+
+
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">ID type</label>
+		<div class="col-sm-6" >
+		@*<div class="col-sm-6" style="display:flex">
+			<input type="text" class="form-control" style="width:90%" name="id_type" value="@Model.AppInfo_New.id_type">
+			<button type="button" class="btn btn-info" style="margin-left:20px" onclick="show_type">Info</button>*@
+			<select class="form-control" name="id_type" id="lang" value="@Model.AppInfo_New.id_type">
+				@foreach (var type in Model.list_TypeInfo)
+				{
+					<option value="@type.id">@type.tipo</option>
+				}
+			</select>
+
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Codigo Departamento</label>
+		<div class="col-sm-6">
+			@*<input type="text" class="form-control" name="codigo_departamento"  value="@Model.AppInfo_New.codigo_departamento">*@
+
+			<select class="form-control" name="codigo_departamento" id="lang" value="@Model.AppInfo_New.codigo_departamento">
+			@foreach (var department in Model.list_DepartmentInfo)
+		{
+					<option value="@department.codigo">@department.nombre</option>
+		}
+			</select>
+		</div>
+	</div>
+
+	@if (Model.successMessage.Length > 0)
+	{
+		<div class="row mb-3">
+			<div class="col-sm-9">
+				<div class='alert alert-success alert-dismissible fade show' role='alert'>
+
+					<strong> @Model.successMessage </strong>
+					<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+				</div>
+			</div>
+		</div>
+	}
+
+	<div class="row mb-3">
+		<div class="offset-sm-3 col-sm-3 d-grid">
+			<input class="btn btn-outline-primary" type="submit" value="Submit" asp-page-handler="Submit" />
+		</div>
+		<div class="col-sm-3 d-grid">
+			<a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+		</div>
+	</div>
+</form>
+
+

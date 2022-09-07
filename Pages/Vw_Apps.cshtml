@@ -1,0 +1,44 @@
+﻿@page
+@model TC01_DavidBrenes_2022.Pages.Vw_Apps
+@{
+}
+<br />
+<h2>Lista de Apps</h2>
+
+@*<a class'btn btn-primary btn-sm' href="/Vw_Apps/Create">New Client</a>*@
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Codigo</th>
+			<th>Nombre</th>
+			<th>Numero Patente</th>
+			<th>Descripcion</th>
+			<th>Fecha Produccion</th>
+			<th>Fecha Exp Licencia</th>
+			<th>Tipo</th>
+			<th>Departamento</th>
+		</tr>	
+	</thead>
+	<tbody>
+		@foreach(var app in Model.list_AppInfo){
+			<tr>
+				<td>@app.codigo</td>
+				<td>@app.nombre</td>
+				<td>@app.num_Patente</td>
+				<td>@app.descripcion</td>
+				<td>@app.fecha_Prod</td>
+				<td>@app.fecha_exp_lic</td>
+				<td>@app.tipo</td>
+				<td>@app.codigo_departamento</td>
+@*				<td>
+					<a class="btn btn-primary btn-sm" href="/Vw_Apps/Edit?codigo=@app.codigo">Editar</a>
+					<a class="btn btn-danger btn-sm" href="/Vw_Apps/Delete?codigo=@app.codigo">Eliminar</a>
+				</td>*@
+			</tr>
+		}
+		
+
+	</tbody>
+</table>

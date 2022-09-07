@@ -1,0 +1,87 @@
+﻿@page
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model TC01_DavidBrenes_2022.Pages.New_ServerModel
+@{
+}
+
+<br>
+<h2>Nuevo Servidor</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+
+	<div class=' alert alert-warning alert-dismissible fade show' role='alert'>
+
+		<strong> @Model.errorMessage </strong>
+		<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+	</div>
+}
+
+<form method="post" >
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Numero de Serie</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="numSerie" value="@Model.ServerInfo.numSerie">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Marca</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="marca" value="@Model.ServerInfo.marca">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Modelo</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="modelo" value="@Model.ServerInfo.modelo">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Memoria</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="memoria" value="@Model.ServerInfo.memoria">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Fecha Compra</label>
+		<div class="col-sm-6">
+			<input type="date" class="form-control" name="fechaCompra" value="@Model.ServerInfo.fechaCompra">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Procesamiento</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="procesamiento" value="@Model.ServerInfo.procesamiento">
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Almacenamiento</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="almacenamiento" value="@Model.ServerInfo.almacenamiento">
+		</div>
+	</div>
+
+	@if (Model.successMessage.Length > 0)
+	{
+		<div class="row mb-3">
+			<div class="col-sm-9">
+				<div class='alert alert-success alert-dismissible fade show' role='alert'>
+
+					<strong> @Model.successMessage </strong>
+					<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+				</div>
+			</div>
+		</div>
+	}
+
+	<div class="row mb-3">
+		<div class="offset-sm-3 col-sm-3 d-grid">
+			<input class="btn btn-outline-primary" type="submit" value="Submit" asp-page-handler="Submit" />
+		</div>
+		<div class="col-sm-3 d-grid">
+			<a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+		</div>
+	</div>
+</form>
+
+
